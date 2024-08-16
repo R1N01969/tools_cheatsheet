@@ -1,0 +1,179 @@
+{
+  "main": {
+    "id": "84deb43bd44cc24d",
+    "type": "split",
+    "children": [
+      {
+        "id": "50f03ddafd993d1f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e7bd999e9f085f93",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "PT チートシート/0.インフラ/Sliver C2.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "c7d4aa135c20c662",
+    "type": "split",
+    "children": [
+      {
+        "id": "04df3dede35fef2c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "0bb5ca701237d969",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "25404de82cb5521b",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "817bf40c52042c8d",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 350.5
+  },
+  "right": {
+    "id": "b4a7f3268c28e962",
+    "type": "split",
+    "children": [
+      {
+        "id": "f4ab24eb3dc73ef6",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "0c9af2375953fe32",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "PT チートシート/0.インフラ/Sliver C2.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": false
+              }
+            }
+          },
+          {
+            "id": "355308deacfd928c",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "PT チートシート/0.インフラ/Sliver C2.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "c6af9657f55a296b",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "a7d4f63ccb36c51a",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "PT チートシート/0.インフラ/Sliver C2.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "e7bd999e9f085f93",
+  "lastOpenFiles": [
+    "PT チートシート/2.資源開発/Sliver C2.md",
+    "PT チートシート/0.インフラ/Sliver C2.md",
+    "PT チートシート/1.偵察/1-2.アクティブ偵察/SMTP列挙.md",
+    "PT チートシート/1.偵察/1-2.アクティブ偵察/SMB列挙.md",
+    "PT チートシート/1.偵察/1-2.アクティブ偵察/SNMP列挙.md",
+    "PT チートシート/1.偵察/1-2.アクティブ偵察/ポートスキャン・サービススキャン.md",
+    "PT チートシート/1.偵察/1-2.アクティブ偵察/DNS列挙.md",
+    "PT チートシート/1.偵察/1-1.パッシブ偵察/Security Headers, Qualys.md",
+    "PT チートシート/1.偵察/1-1.パッシブ偵察/パッシブスキャン.md",
+    "PT チートシート/1.偵察/1-1.パッシブ偵察/公開リポジトリ.md",
+    "PT チートシート/1.偵察/1-1.パッシブ偵察/Netcraft.md",
+    "PT チートシート/1.偵察/1-1.パッシブ偵察/Googleハッキング.md",
+    "PT チートシート/1.偵察/1-1.パッシブ偵察/Whois.md",
+    "PT チートシート/1.偵察/1-2.アクティブ偵察",
+    "PT チートシート/1.偵察/1-1.パッシブ偵察",
+    "PT チートシート/Untitled.canvas",
+    "PT チートシート/14.影響",
+    "PT チートシート/13.持ち出し",
+    "PT チートシート/12.C&C",
+    "PT チートシート/11.収集",
+    "PT チートシート/10.水平展開",
+    "PT チートシート/9.探索",
+    "PT チートシート/8.認証情報アクセス",
+    "PT チートシート/7.防御回避",
+    "CheatSheet/Untitled.md",
+    "1. Recon.md",
+    "2. Weaponize.md",
+    "Welcome.md"
+  ]
+}

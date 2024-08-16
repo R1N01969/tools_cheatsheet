@@ -111,6 +111,10 @@ dig axfr @10.10.10.13 cronos.htb
 
 # brute force
 dnsenum --dnsserver <DNS_IP> --enum -p 0 -s 0 -o subdomains.txt -f <WORDLIST> <DOMAIN>
+
+# list.txt§Ú”√“‚
+for ip in $(cat list.txt); do host $ip.megacorpone.com; done | grep -v "not found"
+for ip in $(seq 200 254); do host 51.222.169.$ip; done | grep -v "not found"
 ```
 
 # ssh
