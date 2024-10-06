@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PT チートシート/9.認証情報アクセス/ハッシュ解読.md",
+                "file": "PT チートシート/15.影響/dummy.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "PT チートシート/9.認証情報アクセス/ハッシュ解読.md",
+                "file": "PT チートシート/15.影響/dummy.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "PT チートシート/9.認証情報アクセス/ハッシュ解読.md",
+                "file": "PT チートシート/15.影響/dummy.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "PT チートシート/9.認証情報アクセス/ハッシュ解読.md"
+                "file": "PT チートシート/15.影響/dummy.md"
               }
             }
           }
@@ -146,10 +146,17 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "e7bd999e9f085f93",
+  "active": "0bb5ca701237d969",
   "lastOpenFiles": [
-    "PT チートシート/9.認証情報アクセス/ハッシュ解読/john the ripper.md",
+    "PT チートシート/14.持ち出し/dummy.md",
+    "PT チートシート/15.影響/dummy.md",
+    "PT チートシート/13.C&C/dummy.md",
+    "PT チートシート/12.収集/dummy.md",
+    "PT チートシート/11.横展開/dummy.md",
+    "PT チートシート/8.防御回避/dummy.md",
+    "PT チートシート/6.永続化/dummy.md",
     "PT チートシート/9.認証情報アクセス/ハッシュ解読.md",
+    "PT チートシート/9.認証情報アクセス/ハッシュ解読/john the ripper.md",
     "PT チートシート/10.探索/Windows/コマンド履歴.md",
     "PT チートシート/9.認証情報アクセス/ハッシュ解読",
     "PT チートシート/10.探索/Windows/タスクスケジューラ.md",
@@ -172,14 +179,7 @@
     "PT チートシート/7.権限昇格/impacket",
     "PT チートシート/9.認証情報アクセス/認証情報取得/impacket/impacket-GetUserSPNs.md",
     "PT チートシート/9.認証情報アクセス/認証情報取得/impacket/impacket-GetNPUsers.md",
-    "PT チートシート/10.探索/Windows/BloodHound.md",
     "PT チートシート/9.認証情報アクセス/認証情報取得/impacket",
-    "PT チートシート/2.資源開発/Metasploit.md",
-    "PT チートシート/2.資源開発/コンパイル/i686-w64-mingw32-gcc.md",
-    "PT チートシート/2.資源開発/Sliver C2.md",
-    "PT チートシート/1.偵察/1-2.アクティブ偵察/SMB列挙.md",
-    "PT チートシート/7.権限昇格/Windows/RunsAs.md",
-    "PT チートシート/10.探索/Windows/保存された資格情報/Untitled.md",
     "PT チートシート/10.探索/Windows/保存された資格情報",
     "PT チートシート/7.権限昇格/Windows",
     "PT チートシート/9.認証情報アクセス/認証試行",
