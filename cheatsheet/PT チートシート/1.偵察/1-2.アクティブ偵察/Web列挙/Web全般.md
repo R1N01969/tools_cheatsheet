@@ -1,3 +1,8 @@
+## サブドメイン
+```sh
+ffuf -u http://corporate.htb -w /usr/share/wordlists/seclists/Discovery/DNS/subdomains-top1million-5000.txt -H "Host:FUZZ.corporate.htb" -t 200
+```
+
 ## Webページ
 ```sh
 sudo nmap -p80 --script "http-enum" 192.168.1.1

