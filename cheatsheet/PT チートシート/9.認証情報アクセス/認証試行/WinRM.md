@@ -1,3 +1,12 @@
+### Powershell
+```sh
+# バインドシェル上のPowershellでリモートセッションを作ると挙動がおかしくなる可能性があるので注意
+$password = ConvertTo-SecureString "qwertqwertqwert123!!" -AsPlainText -Force
+$cred = New-Object System.Management.Automation.PSCredential("daveadmin", $password)
+Enter-PSSession -ComputerName CLIENTWK220 -Credential $cred
+```
+
+### evil-winrm
 ```sh
 evil-winrm -u user -p password -i 192.168.0.1
 

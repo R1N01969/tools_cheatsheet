@@ -1,4 +1,6 @@
 ```sh
+runas /user:backupadmin cmd
+
 # 保存された自覚情報を利用
 runas /savecred /user:admin cmd.exe
 runas /savecred /user:THM.red\thm-local cmd.exe

