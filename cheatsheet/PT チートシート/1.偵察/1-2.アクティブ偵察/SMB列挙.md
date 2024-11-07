@@ -5,6 +5,7 @@ smbclient -L //SERVER_IP/
 
 # guestユーザが有効になってるか確認
 smbclient -L //SERVER_IP/ -U 'guest'
+smbclient -L //192.168.231.63 -p 4455 -U hr_admin --password=Welcome1234
 
 sudo nbtscan -r 192.168.50.0/24
 
