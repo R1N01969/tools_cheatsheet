@@ -11,15 +11,12 @@
             "id": "e7bd999e9f085f93",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "PT チートシート/9.認証情報アクセス/認証試行/パスワードスプレー.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
+                "file": "Pasted image 20241119124639.png"
               },
-              "icon": "lucide-file",
-              "title": "パスワードスプレー"
+              "icon": "lucide-image",
+              "title": "Pasted image 20241119124639"
             }
           }
         ]
@@ -53,7 +50,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "find-",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -74,8 +71,7 @@
               "title": "Bookmarks"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -95,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "PT チートシート/9.認証情報アクセス/認証試行/パスワードスプレー.md",
+                "file": "Pasted image 20241119124639.png",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +101,7 @@
                 "unlinkedCollapsed": false
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for パスワードスプレー"
+              "title": "Backlinks for Pasted image 20241119124639"
             }
           },
           {
@@ -163,35 +159,35 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "25404de82cb5521b",
+  "active": "e7bd999e9f085f93",
   "lastOpenFiles": [
-    "PT チートシート/9.認証情報アクセス/認証試行/SSH.md",
+    "PT チートシート/9.認証情報アクセス/認証情報取得/mimikatz.md",
     "PT チートシート/9.認証情報アクセス/認証試行/パスワードスプレー.md",
+    "PT チートシート/1.偵察/1-2.アクティブ偵察/SMB列挙.md",
+    "PT チートシート/7.権限昇格/Windows/PsExec.md",
+    "PT チートシート/9.認証情報アクセス/認証情報取得/Rubeus.md",
+    "PT チートシート/9.認証情報アクセス/認証情報取得/kekeo.md",
+    "PT チートシート/9.認証情報アクセス/認証情報取得/ForgeCert.md",
+    "PT チートシート/9.認証情報アクセス/認証情報取得/impacket/impacket-wmiexec.md",
+    "PT チートシート/9.認証情報アクセス/認証情報取得/impacket/impacket-secretsdump.md",
+    "PT チートシート/9.認証情報アクセス/認証情報取得/impacket/impacket-GetUserSPNs.md",
+    "PT チートシート/9.認証情報アクセス/認証情報取得/impacket/impacket-GetNPUsers.md",
+    "PT チートシート/10.探索/Windows/保存された資格情報.md",
+    "PT チートシート/7.権限昇格/Windows/RunsAs.md",
+    "PT チートシート/7.権限昇格/Windows/SigmaPotato.md",
+    "PT チートシート/7.権限昇格/impacket/impacket-psexec.md",
     "PT チートシート/9.認証情報アクセス/認証試行/WinRM.md",
+    "PT チートシート/2.資源開発/ペイロード作成/Sliver C2.md",
+    "PT チートシート/0.インフラ/Sliver C2.md",
+    "PT チートシート/10.探索/Windows/インストールアプリの表示.md",
+    "PT チートシート/10.探索/Windows/サービスチケット.md",
+    "Pasted image 20241119124639.png",
+    "PT チートシート/99.その他/圧縮・解凍.md",
+    "PT チートシート/9.認証情報アクセス/認証試行/SSH.md",
     "PT チートシート/9.認証情報アクセス/認証試行/ZIP.md",
     "PT チートシート/9.認証情報アクセス/認証試行/Web.md",
     "PT チートシート/9.認証情報アクセス/認証試行/SMB.md",
     "PT チートシート/9.認証情報アクセス/認証試行/RDP.md",
-    "PT チートシート/8.防御回避/Linux/apparmor.md",
-    "PT チートシート/2.資源開発/ペイロード作成/Sliver C2.md",
-    "PT チートシート/0.インフラ/Sliver C2.md",
-    "PT チートシート/10.探索/Windows/PowerView.md",
-    "PT チートシート/10.探索/Windows/Sysinternal Suite.md",
-    "PT チートシート/10.探索/Windows/BloodHound.md",
-    "PT チートシート/10.探索/Windows/ユーザの追加・検索.md",
-    "PT チートシート/10.探索/Windows/ファイル権限.md",
-    "PT チートシート/10.探索/Windows/ファイル検索.md",
-    "PT チートシート/10.探索/Windows/ネットワーク情報.md",
-    "PT チートシート/10.探索/Windows/タスクスケジューラ.md",
-    "PT チートシート/10.探索/Windows/システム情報.md",
-    "PT チートシート/10.探索/Windows/サービス検索.md",
-    "PT チートシート/10.探索/Windows/コマンド履歴.md",
-    "PT チートシート/10.探索/Windows/インストールアプリの表示.md",
-    "PT チートシート/9.認証情報アクセス/認証情報取得/mimikatz.md",
-    "PT チートシート/99.その他/圧縮・解凍.md",
-    "PT チートシート/10.探索/Windows/CN, DC.md",
-    "Pasted image 20241119124639.png",
-    "PT チートシート/1.偵察/1-2.アクティブ偵察/RPC列挙.md",
     "PT チートシート/11.横展開/ポートフォワード/ローカル/Windows",
     "PT チートシート/11.横展開/ポートフォワード/リモート",
     "PT チートシート/11.横展開/ポートフォワード/ローカル",
