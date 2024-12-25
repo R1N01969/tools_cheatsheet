@@ -1,4 +1,6 @@
 ### config.library-ms
+テスト端末等で開くと、`<url>`タグ内がシリアライズされて別端末や再起動後の同一端末において機能しなくなることがあるため注意！！
+
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <libraryDescription xmlns="http://schemas.microsoft.com/windows/2009/library">
@@ -14,7 +16,7 @@
 <isDefaultSaveLocation>true</isDefaultSaveLocation>
 <isSupported>false</isSupported>
 <simpleLocation>
-<url>http://192.168.250.199:47001</url>
+<url>http://192.168.45.196</url>
 </simpleLocation>
 </searchConnectorDescription>
 </searchConnectorDescriptionList>

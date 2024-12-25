@@ -1,5 +1,7 @@
 ### impacket-mssqlclient
 ```sh
+
+# -windows-authを指定することでKerberos認証ではなく、NTLM認証を強制できる
 impacket-mssqlclient Administrator:Password@192.168.1.1 -windows-auth
 
 SQL (SQLPLAYGROUND\Administrator  dbo@master)> SELECT @@version;

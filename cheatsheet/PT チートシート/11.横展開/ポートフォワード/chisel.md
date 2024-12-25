@@ -1,9 +1,10 @@
 
 ```sh
 # サーバ側
-chisel server --port 8080 --reverse
+chisel server --port 8080 --reverse --socks5
 
 # クライアント側
+chisel client 192.168.118.4:8080 R:5555:socks # proxychainsのsocksポートを5555に指定
 chisel client 192.168.118.4:8080 R:socks > /dev/null 2>&1 &
 
 # クライアント側

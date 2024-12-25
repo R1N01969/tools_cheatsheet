@@ -8,6 +8,9 @@ Enter-PSSession -ComputerName CLIENTWK220 -Credential $cred
 
 ### evil-winrm
 ```sh
+$ evil-winrm -u '[MEGACORP\]snovvcrash' -p 'Passw0rd!' -i 10.10.13.37 -s `pwd` -e `pwd`
+$ evil-winrm -u '[MEGACORP\]snovvcrash' -H fc525c9683e8fe067095ba2ddc971889 -i 10.10.13.37 -s `pwd` -e `pwd`
+
 evil-winrm -u user -p password -i 192.168.0.1
 
 # PtH
