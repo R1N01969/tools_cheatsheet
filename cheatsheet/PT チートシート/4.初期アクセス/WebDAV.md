@@ -24,5 +24,15 @@
 ```
 
 ```sh
+# webdavサーバ起動
 wsgidav --host=0.0.0.0 --port=80 --auth=anonymous --root ./webdav
+
+# webdavサーバにファイルアップロード
+curl -T FILEPATH http://SERVERIP/
+
+# Windowsだとcurlエイリアスと認識されてInvoke-WebRequestが実行されることがある。
+# Invoke-WebRequestには-Tオプションはないのでエラーが出る。
+# 回避のためにしっかりcurlバイナリを指定する必要がある。
+curl.exe -T FILEPATH http://SERVERIP/
+C:\Windows\System32\curl.exe -T FILEPATH http://SERVERIP/
 ```

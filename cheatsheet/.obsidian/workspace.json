@@ -43,13 +43,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PT チートシート/9.認証情報アクセス/認証試行/WinRM.md",
+                "file": "PT チートシート/2.資源開発/依存連鎖攻撃/Pythonパッケージ作成.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "WinRM"
+              "title": "Pythonパッケージ作成"
             }
           },
           {
@@ -58,13 +58,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PT チートシート/99.その他/ssh-keygen.md",
+                "file": "PT チートシート/1.偵察/1-2.アクティブ偵察/Web列挙/Jenkins.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "ssh-keygen"
+              "title": "Jenkins"
             }
           },
           {
@@ -83,7 +83,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -114,7 +114,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "hashcat",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -156,7 +156,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "PT チートシート/99.その他/ssh-keygen.md",
+                "file": "PT チートシート/2.資源開発/依存連鎖攻撃/Pythonパッケージ作成.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -166,7 +166,7 @@
                 "unlinkedCollapsed": false
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for ssh-keygen"
+              "title": "Backlinks for Pythonパッケージ作成"
             }
           },
           {
@@ -226,36 +226,41 @@
   },
   "active": "25404de82cb5521b",
   "lastOpenFiles": [
-    "PT チートシート/8.防御回避/Windows/CredentialGuard.md",
-    "PT チートシート/1.偵察/1-2.アクティブ偵察/AWS/ドメイン・サブドメインの偵察.md",
-    "PT チートシート/1.偵察/1-2.アクティブ偵察/AWS/パブリックリソースの偵察.md",
-    "PT チートシート/8.防御回避/dummy.md",
-    "PT チートシート/8.防御回避/Linux/apparmor.md",
-    "PT チートシート/8.防御回避/Windows",
-    "PT チートシート/8.防御回避/Linux",
-    "PT チートシート/99.その他/防御機能/Untitled.md",
-    "PT チートシート/99.その他/防御機能",
-    "Pasted image 20241119124639.png",
+    "PT チートシート/2.資源開発/ネットワークスキャン/ポートスキャン.md",
+    "PT チートシート/2.資源開発/依存連鎖攻撃/Pythonパッケージ作成.md",
+    "PT チートシート/2.資源開発/ネットワークスキャン",
+    "PT チートシート/2.資源開発/バックドアアカウント作成/AWS/アカウント作成.md",
+    "PT チートシート/2.資源開発/依存連鎖攻撃",
+    "PT チートシート/1.偵察/1-2.アクティブ偵察/AWS/IAMの偵察.md",
+    "PT チートシート/2.資源開発/バックドアアカウント作成/AWS",
+    "PT チートシート/2.資源開発/バックドアアカウント作成",
+    "PT チートシート/2.資源開発/Untitled.md",
+    "PT チートシート/10.探索/Linux/EC2.md",
+    "PT チートシート/10.探索/Linux/コンテナ.md",
+    "PT チートシート/2.資源開発/パイプライン汚染/Jenkinsfile.md",
+    "PT チートシート/2.資源開発/パスワードリスト作成/hashcat.md",
+    "PT チートシート/2.資源開発/パイプライン汚染",
+    "PT チートシート/9.認証情報アクセス/認証情報解読/hashcat.md",
+    "PT チートシート/1.偵察/1-2.アクティブ偵察/AWS/S3バケットの偵察.md",
+    "PT チートシート/1.偵察/1-2.アクティブ偵察/Web列挙/Jenkins.md",
+    "PT チートシート/1.偵察/1-2.アクティブ偵察/git列挙.md",
     "PT チートシート/99.その他/MSSQL.md",
-    "PT チートシート/3.配送/SMBClient.md",
-    "PT チートシート/3.配送/フィッシング.md",
-    "PT チートシート/3.配送/Windows.md",
-    "PT チートシート/1.偵察/1-2.アクティブ偵察/SMB列挙.md",
     "PT チートシート/9.認証情報アクセス/認証試行/WinRM.md",
-    "PT チートシート/9.認証情報アクセス/認証情報取得/mimikatz.md",
-    "PT チートシート/9.認証情報アクセス/認証情報取得/impacket/impacket-ntlmrelayx.md",
-    "PT チートシート/10.探索/Windows/BloodHound.md",
     "PT チートシート/4.初期アクセス/WebDAV.md",
     "PT チートシート/1.偵察/1-2.アクティブ偵察/Web列挙/WordPress.md",
-    "PT チートシート/11.横展開/ポートフォワード/chisel.md",
-    "PT チートシート/10.探索/Windows/自動列挙.md",
-    "PT チートシート/10.探索/Windows/実行中のプロセス.md",
-    "PT チートシート/10.探索/Windows/保存された資格情報.md",
-    "PT チートシート/10.探索/Windows/ユーザの追加・検索.md",
-    "PT チートシート/10.探索/Windows/ファイル権限.md",
-    "PT チートシート/10.探索/Windows/ファイル検索.md",
-    "PT チートシート/10.探索/Windows/ネットワーク情報.md",
-    "PT チートシート/10.探索/Windows/タスクスケジューラ.md",
+    "PT チートシート/1.偵察/1-2.アクティブ偵察/AWS/他のアカウントのIAMユーザ列挙.md",
+    "PT チートシート/1.偵察/1-2.アクティブ偵察/AWS/パブリックリソースの偵察.md",
+    "PT チートシート/0.インフラ/AWS.md",
+    "PT チートシート/1.偵察/1-2.アクティブ偵察/AWS/サブドメイン下のサービス偵察.md",
+    "PT チートシート/1.偵察/1-2.アクティブ偵察/AWS/ドメイン・サブドメインの偵察.md",
+    "PT チートシート/9.認証情報アクセス/認証情報取得/Rubeus.md",
+    "PT チートシート/9.認証情報アクセス/認証情報取得/kekeo.md",
+    "PT チートシート/9.認証情報アクセス/認証情報取得/ForgeCert.md",
+    "PT チートシート/9.認証情報アクセス/認証情報取得/impacket/impacket-wmiexec.md",
+    "PT チートシート/8.防御回避/Windows",
+    "PT チートシート/8.防御回避/Linux",
+    "PT チートシート/99.その他/防御機能",
+    "Pasted image 20241119124639.png",
     "Pasted image 20241221234351.png",
     "Pasted image 20241221234332.png",
     "Pasted image 20241221234258.png",
@@ -269,11 +274,6 @@
     "Untitled.canvas",
     "Untitled 1.canvas",
     "PT チートシート/6.永続化/mimikatz",
-    "PT チートシート/11.横展開/DCOM",
-    "PT チートシート/11.横展開/mimikatz",
-    "PT チートシート/11.横展開/PsExec",
-    "PT チートシート/11.横展開/WinRM",
-    "PT チートシート/11.横展開/WMIC",
     "PT チートシート/Untitled.canvas"
   ]
 }

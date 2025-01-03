@@ -86,3 +86,8 @@ Get-ObjectAcl -Identity "Management Department" | ? {$_.ActiveDirectoryRights -e
 # 利用可能な共有の列挙
 Find-DomainShare
 ```
+
+```sh
+# 特定のSIDがGenericAllを持っている対象をObjectSIDを探す
+Get-ObjectAcl | ? {$_.ActiveDirectoryRights -eq "GenericAll"} | ? {$_.SecurityIdentifier -eq "S-1-5-21-1987370270-658905905-1781884369-1104" } | select ObjectSID,SecurityIdentifier,ActiveDirectoryRights
+```
